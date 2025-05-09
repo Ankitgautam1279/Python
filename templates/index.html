@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python App in HTML</title>
+</head>
+<body>
+    <h1>Python App in HTML</h1>
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" />
+    <button onclick="processNumber()">Submit</button>
+
+    <h2>Result: <span id="result"></span></h2>
+
+    <script>
+        async function processNumber() {
+            const number = document.getElementById('number').value;
+
+            const response = await fetch('/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ number }),
+            });
+
+            const data = await response.json();
+            document.getElementById('result').textContent = data.result;
+        }
+    </script>
+</body>
+</html>

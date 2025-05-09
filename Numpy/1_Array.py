@@ -16,7 +16,7 @@ list1.sort()        #list1 sorted
 # list2.insert(2, "pundar")  #  TO INSERT DATA, WE PROVIDE (INDEX NUMBER , VALUES)
 # print(list2)
 
-a = arr.array('i', [12,15,13,16]) #we can provide 2 arguement only 1st ; dataType 2.list
+a = arr.array('i', [12,15,13,16]) #we can provide 2 arguement only, 1st ; dataType & 2 : list
 # print(a)
 # for e in a:
 #     print(e)
@@ -32,3 +32,11 @@ a = arr.array('i', [12,15,13,16]) #we can provide 2 arguement only 1st ; dataTyp
 print(a.index(13))
 a.extend([1,2,3,4])
 print(a)
+
+# signed char / unsigned char : 1 bytes
+# signed short/ unsigned short : 2 bytes
+# signed int / unsigned int : 2 bytes
+# signed long / unsigned long : 4 bytes
+# signed & unsigned Long long : 8 bytes
+# float : 4 bytes
+# double : 8 bytes
